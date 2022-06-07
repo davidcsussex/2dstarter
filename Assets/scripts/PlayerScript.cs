@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; // add this line to access text
+using UnityEngine.SceneManagement;
 
 //keys=left,right,space
 
@@ -64,6 +65,7 @@ public class PlayerScript : MonoBehaviour
         Land();
 
         UpdateScore();
+        Quit();
 
     }
 
@@ -234,6 +236,15 @@ public class PlayerScript : MonoBehaviour
 
         scoreText.text += "   Score: " + score.ToString();  // convert the int to a string
         oldScore = score;
+    }
+
+
+    void Quit()
+    {
+        if (Input.GetKeyDown("q"))
+        {
+            SceneManager.LoadScene("Menu", LoadSceneMode.Single);
+        }
     }
 
 

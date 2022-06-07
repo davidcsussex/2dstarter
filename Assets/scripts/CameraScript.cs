@@ -23,7 +23,7 @@ public class CameraScript : MonoBehaviour
     {
         if (target)
         {
-            transform.position = Vector3.Lerp(transform.position, target.position + target_Offset, 0.05f);
+            transform.position = Vector3.Lerp(transform.position, target.position + target_Offset, 0.1f);
         }
 
     }
